@@ -1,4 +1,3 @@
-
 import React from "react";
 import portfolioData from "../data/portfolio.json";
 
@@ -16,9 +15,13 @@ const Portfolio = () => {
           {portfolioData.projects.map((project: any, idx: number) => (
             <div key={idx} className="bg-white rounded-xl shadow-lg hover:shadow-xl p-6 flex flex-col">
               <img
-                src={project.image}
+                src={`/${project.image}`}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-lg mb-4 border"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/placeholder.svg';
+                }}
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
               <p className="text-gray-600 flex-grow">{project.description}</p>
