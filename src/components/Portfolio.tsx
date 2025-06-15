@@ -14,15 +14,17 @@ const Portfolio = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioData.projects.map((project: any, idx: number) => (
             <div key={idx} className="bg-white rounded-xl shadow-lg hover:shadow-xl p-6 flex flex-col">
-              <img
-                src={`/${project.image}`}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-lg mb-4 border"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/placeholder.svg';
-                }}
-              />
+              <div className="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                <img
+                  src={`${import.meta.env.VITE_BASE_PATH || ''}/${project.image}`}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-lg"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = `${import.meta.env.VITE_BASE_PATH || ''}/placeholder.svg`;
+                  }}
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
               <p className="text-gray-600 flex-grow">{project.description}</p>
               <a

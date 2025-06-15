@@ -4,7 +4,7 @@ import Icon from './Icon';
 import contactData from '../data/contact.json';
 import aboutData from '../data/about.json';
 
-const AVATAR_URL = "/avatar.jpg"; // static avatar
+const AVATAR_URL = `${import.meta.env.VITE_BASE_PATH || ''}/avatar.jpg`; // dynamic base path
 
 type ContactItem = {
   icon: "github" | "Phone" | "Mail" | "linkedin";
@@ -150,7 +150,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/resume.pdf"
+              href={`${import.meta.env.VITE_BASE_PATH || ''}/resume.pdf`}
               download
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center gap-2 justify-center"
             >
