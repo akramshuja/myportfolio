@@ -70,6 +70,10 @@ const Hero = () => {
     )
   ];
 
+  // Find email contact info for the Get In Touch button
+  const emailContact = contactData.contactInfo.find(contact => contact.icon === "Mail");
+  const emailHref = emailContact?.href || (emailContact?.value ? `mailto:${emailContact.value}` : '#contact');
+
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,7 +158,7 @@ const Hero = () => {
               Download Resume
             </a>
             <a
-              href="#contact"
+              href={emailHref}
               className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
             >
               Get In Touch
