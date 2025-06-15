@@ -1,0 +1,24 @@
+{
+  "highlights": [
+    {
+      "icon": "Code",
+      "title": "Web Development",
+      "description": "Proficient in modern web technologies and frameworks"
+    },
+    {
+      "icon": "Server",
+      "title": "Backend Development",
+      "description": "Experience with server-side technologies and database management"
+    },
+    {
+      "icon": "Brain",
+      "title": "Problem Solving",
+      "description": "Strong analytical skills and ability to solve complex technical challenges"
+    },
+    {
+      "icon": "Users",
+      "title": "Team Collaboration",
+      "description": "Excellent communication skills and experience working in agile teams"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "experiences": [
+    {
+      "title": "Senior Software Developer",
+      "company": "Tech Company Inc.",
+      "duration": "Jan 2023 – Present",
+      "achievements": [
+        "Led development of key features for main product",
+        "Mentored junior developers and conducted code reviews",
+        "Implemented CI/CD pipeline improvements"
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Tech Company Inc.",
+      "duration": "Jan 2021 – Dec 2022",
+      "achievements": [
+        "Developed and maintained web applications",
+        "Collaborated with cross-functional teams",
+        "Improved application performance by 40%"
+      ]
+    },
+    {
+      "title": "Junior Developer",
+      "company": "Startup XYZ",
+      "duration": "Jun 2020 – Dec 2020",
+      "achievements": [
+        "Built responsive web interfaces",
+        "Participated in agile development process",
+        "Fixed critical bugs in production"
+      ]
+    }
+  ]
+}

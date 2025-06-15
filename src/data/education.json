@@ -1,0 +1,12 @@
+{
+  "education": {
+    "college": "Your University Name",
+    "duration": "2018-2022",
+    "degree": "Bachelor of Science (B.S.)",
+    "specialization": "Computer Science"
+  },
+  "courses": [
+    "Web Development Bootcamp",
+    "Data Science Certification"
+  ]
+}

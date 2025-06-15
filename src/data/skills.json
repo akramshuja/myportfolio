@@ -1,0 +1,24 @@
+{
+  "skillCategories": [
+    {
+      "title": "Programming Languages",
+      "skills": ["JavaScript", "Python", "Java"],
+      "color": "from-blue-500 to-blue-600"
+    },
+    {
+      "title": "Frameworks & Libraries",
+      "skills": ["React", "Node.js", "Express"],
+      "color": "from-green-500 to-green-600"
+    },
+    {
+      "title": "DevOps & Tools",
+      "skills": ["Git", "Docker", "AWS"],
+      "color": "from-purple-500 to-purple-600"
+    },
+    {
+      "title": "Platforms & Technologies",
+      "skills": ["Web Development", "Cloud Computing", "Database Management"],
+      "color": "from-orange-500 to-orange-600"
+    }
+  ]
+}

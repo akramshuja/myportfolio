@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "title": "Sample Project 1",
+      "description": "This is a placeholder project description. Replace this with your actual project details.",
+      "image": "placeholder.svg",
+      "link": "https://github.com/yourusername/project1"
+    },
+    {
+      "title": "Sample Project 2",
+      "description": "This is another placeholder project description. Replace this with your actual project details.",
+      "image": "placeholder.svg",
+      "link": "https://github.com/yourusername/project2"
+    }
+  ]
+}
