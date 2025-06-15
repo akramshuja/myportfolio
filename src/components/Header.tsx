@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import aboutData from '../data/about.json';
 
-const Header = () => {
+interface HeaderProps {
+  activeSection: string;
+  onNavClick: (sectionId: string) => void;
+}
+
+const Header = ({ activeSection, onNavClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavClick = (sectionId: string) => {
+    onNavClick(sectionId);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -15,18 +24,21 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <button 
+              onClick={() => handleNavClick('home')}
+              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
               {aboutData.name}
-            </Link>
+            </button>
           </div>
 
           {/* Desktop menu */}
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link to="/#about" className="text-gray-600 hover:text-blue-600">About</Link>
-            <Link to="/#experience" className="text-gray-600 hover:text-blue-600">Experience</Link>
-            <Link to="/#skills" className="text-gray-600 hover:text-blue-600">Skills</Link>
-            <Link to="/#portfolio" className="text-gray-600 hover:text-blue-600">Portfolio</Link>
-            <Link to="/#contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
+            <button onClick={() => handleNavClick('about')} className={`text-gray-600 hover:text-blue-600 ${activeSection === 'about' ? 'text-blue-600' : ''}`}>About</button>
+            <button onClick={() => handleNavClick('experience')} className={`text-gray-600 hover:text-blue-600 ${activeSection === 'experience' ? 'text-blue-600' : ''}`}>Experience</button>
+            <button onClick={() => handleNavClick('skills')} className={`text-gray-600 hover:text-blue-600 ${activeSection === 'skills' ? 'text-blue-600' : ''}`}>Skills</button>
+            <button onClick={() => handleNavClick('portfolio')} className={`text-gray-600 hover:text-blue-600 ${activeSection === 'portfolio' ? 'text-blue-600' : ''}`}>Portfolio</button>
+            <button onClick={() => handleNavClick('contact')} className={`text-gray-600 hover:text-blue-600 ${activeSection === 'contact' ? 'text-blue-600' : ''}`}>Contact</button>
           </div>
 
           {/* Mobile menu button */}
@@ -44,11 +56,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
-              <Link to="/#about" className="block px-3 py-2 text-gray-600 hover:text-blue-600">About</Link>
-              <Link to="/#experience" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Experience</Link>
-              <Link to="/#skills" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Skills</Link>
-              <Link to="/#portfolio" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Portfolio</Link>
-              <Link to="/#contact" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</Link>
+              <button onClick={() => handleNavClick('about')} className={`block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 ${activeSection === 'about' ? 'text-blue-600' : ''}`}>About</button>
+              <button onClick={() => handleNavClick('experience')} className={`block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 ${activeSection === 'experience' ? 'text-blue-600' : ''}`}>Experience</button>
+              <button onClick={() => handleNavClick('skills')} className={`block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 ${activeSection === 'skills' ? 'text-blue-600' : ''}`}>Skills</button>
+              <button onClick={() => handleNavClick('portfolio')} className={`block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 ${activeSection === 'portfolio' ? 'text-blue-600' : ''}`}>Portfolio</button>
+              <button onClick={() => handleNavClick('contact')} className={`block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 ${activeSection === 'contact' ? 'text-blue-600' : ''}`}>Contact</button>
             </div>
           </div>
         )}
