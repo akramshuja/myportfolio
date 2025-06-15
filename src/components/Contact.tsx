@@ -1,4 +1,3 @@
-
 import React from "react";
 import contactData from "../data/contact.json";
 import { Mail, Phone } from "lucide-react";
@@ -9,6 +8,10 @@ const iconMap: Record<string, JSX.Element> = {
 };
 
 const Contact = () => {
+  // Find email contact info
+  const emailContact = contactData.contactInfo.find(contact => contact.icon === "Mail");
+  const phoneContact = contactData.contactInfo.find(contact => contact.icon === "Phone");
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,13 +52,13 @@ const Contact = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:kssasarma@gmail.com"
+                href={emailContact?.href || `mailto:${emailContact?.value}`}
                 className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
               >
                 Send Email
               </a>
               <a
-                href="tel:+919381088338"
+                href={phoneContact?.href || `tel:${phoneContact?.value}`}
                 className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
               >
                 Call Now
