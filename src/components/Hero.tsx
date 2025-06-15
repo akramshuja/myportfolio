@@ -2,6 +2,7 @@ import React from 'react';
 import { Download } from 'lucide-react';
 import Icon from './Icon';
 import contactData from '../data/contact.json';
+import aboutData from '../data/about.json';
 
 const AVATAR_URL = "/avatar.jpg"; // static avatar
 
@@ -84,20 +85,18 @@ const Hero = () => {
                 />
               ) : (
                 <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold select-none">
-                  SK
+                  {aboutData.name.split(' ').map(n => n[0]).join('')}
                 </div>
               )}
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-              Satya Kodamanchili
+              {aboutData.name}
             </h1>
             <h2 className="text-2xl md:text-3xl text-blue-600 font-semibold mb-6">
-              Senior Software Engineer
+              {aboutData.title}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              5+ Years experienced Senior Software Engineer adept in bringing forth expertise in design,
-              installation, testing, and maintenance of software systems. Proficient in various platforms
-              and languages with a good understanding of AI models and RAG concepts.
+              {aboutData.description}
             </p>
           </div>
 

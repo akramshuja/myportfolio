@@ -1,5 +1,5 @@
-
 import React from 'react';
+import aboutData from '../data/about.json';
 
 const Footer = () => {
   return (
@@ -7,15 +7,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-            Satya Kodamanchili
+            {aboutData.name}
           </h3>
           <p className="text-gray-400 mb-4">
-            Senior Software Engineer | Java | AI Solutions | DevOps
+            {aboutData.title}
           </p>
           {/* Removed LinkedIn link from footer */}
           <div className="border-t border-gray-700 pt-4">
             <p className="text-gray-500 text-sm">
-              © 2025 Satya Kodamanchili. All rights reserved.
+              © {new Date().getFullYear()} {aboutData.name}. All rights reserved.
             </p>
           </div>
         </div>
