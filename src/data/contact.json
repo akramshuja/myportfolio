@@ -3,20 +3,20 @@
     {
       "icon": "Phone",
       "title": "Phone",
-      "value": "+1 (555) 123-4567",
-      "href": "tel:+15551234567"
+      "value": "+91 8379963819",
+      "href": "tel:+918379963819"
     },
     {
       "icon": "Mail",
       "title": "Email",
-      "value": "your.email@example.com",
-      "href": "mailto:your.email@example.com"
+      "value": "akram.shuja@gmail.com",
+      "href": "mailto:akram.shuja@gmail.com"
     },
     {
       "icon": "linkedin",
       "title": "LinkedIn",
       "value": "your-linkedin-profile",
-      "href": "https://www.linkedin.com/in/your-linkedin-profile/"
+      "href": "https://www.linkedin.com/in/akramshuja/"
     }
   ]
 }
