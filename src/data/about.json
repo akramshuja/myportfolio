@@ -1,17 +1,17 @@
 {
-  "name": "Your Name",
+  "name": "Akram Shuja",
   "title": "Senior Software Engineer",
-  "description": "5+ Years experienced Senior Software Engineer adept in bringing forth expertise in design, installation, testing, and maintenance of software systems. Proficient in various platforms and languages with a good understanding of AI models and RAG concepts.",
+  "description": "A design-minded developer with over a decade of experience in building enterprise applications using Java and related technologies. Highly adaptable to evolving tech stacks. Currently pursuing a Master's in AI and ML from BITS Pilani to expand expertise into cutting-edge domains.",
   "highlights": [
     {
       "icon": "Code",
-      "title": "Web Development",
-      "description": "Proficient in modern web technologies and frameworks"
+      "title": "HLD and LLD of complex projects",
+      "description": "Expert in designing scalable architectures for complex projects, leveraging proven design patterns and best practices to ensure robustness, maintainability, and performance."
     },
     {
       "icon": "Server",
-      "title": "Backend Development",
-      "description": "Experience with server-side technologies and database management"
+      "title": "Full Stack Development",
+      "description": "Extensive experience in server-side development and database architecture. Solid understanding of frontend workflows and seamless integration with RESTful APIs and microservices."
     },
     {
       "icon": "Brain",
@@ -21,7 +21,7 @@
     {
       "icon": "Users",
       "title": "Team Collaboration",
-      "description": "Excellent communication skills and experience working in agile teams"
+      "description": "Excellent communication skills and experience working in agile teams."
     }
   ]
 }
